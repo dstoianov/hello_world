@@ -34,19 +34,19 @@ generate-secret: length = 32
 generate-secret:
 	@strings /dev/urandom | grep -o '[[:alnum:]]' | head -n $(length) | tr -d '\n'; echo
 
-conf/keys/%.pub.ssh:
+deployment/keys/%.pub.ssh:
 	# Generate SSH deploy key for a given environment
 	ssh-keygen -t rsa -b 4096 -f $*.priv -C "$*@${PROJECT_NAME}"
 	@mv $*.priv.pub $@
 
-staging-deploy-key: conf/keys/staging.pub.ssh
+staging-deploy-key: deployment/keys/staging.pub.ssh
 
-production-deploy-key: conf/keys/production.pub.ssh
+production-deploy-key: deployment/keys/production.pub.ssh
 
 # Translation helpers
 makemessages:
 	# Extract English messages from our source code
-	python manage.py makemessages --ignore 'conf/*' --ignore 'docs/*' --ignore 'requirements/*' \
+	python manage.py makemessages --ignore 'deployment/*' --ignore 'docs/*' --ignore 'requirements/*' \
 		--no-location --no-obsolete -l en
 
 compilemessages:
@@ -93,4 +93,4 @@ docs:
 .PHONY: default test lint lint-py lint-js generate-secret makemessages \
 		pushmessages pullmessages compilemessages docs
 
-.PRECIOUS: conf/keys/%.pub.ssh
+.PRECIOUS: deployment/keys/%.pub.ssh

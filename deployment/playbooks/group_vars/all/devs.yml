@@ -1,0 +1,5 @@
+---
+users:
+  - name: jrb
+    public_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHLe3wCJVU208LmKwhebFzUhCqq5IHuOEIgmmXr+XJI2i5Gv+tx2TsZqJLOX8/QX1scAMec5oCeitxlon0u49fhPcOQ7TLfnXiKvjdh1W0ru6YAakkt0rgE4RcYdX9RwZ7WnlpCq/zWgvvIp+bY0UX6EULhvEImUmCSLDQ3NRqaFkZm5hdwu1X2kr6oYfU2O/s500U4kSlPHj53HIj+kcpAjWc+BFhCAtI1hlUpBWnTece+61iAj4KhiM93+eJHuSNb3q1qke41CuA8klHODtbqFtH/SWatQBEzehyC2HKcFPLRQeJrNno2ooBlU5ELKAtpbxjYIlaN7qdcRs1inUp jrb@localhost.localdomain

@@ -12,8 +12,9 @@ coverage
 */settings/local.py
 public/static/
 public/media/
-conf/pillar/*/deploy
 *.priv
+*.retry
+deployment/roles/
 .env
 node_modules
 */static/js/bundle.js

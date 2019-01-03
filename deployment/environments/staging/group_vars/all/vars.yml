@@ -1,0 +1,10 @@
+---
+env_name: staging
+domain: 192.168.33.11
+repo_branch: master
+cert_source: none
+force_ssl: false
+cloud_staticfiles: false
+source_is_local: false
+gunicorn_num_workers: 2
+use_newrelic: false
